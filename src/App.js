@@ -69,7 +69,7 @@ function App(props) {
       <div className="container">
       {/* <Switch> */}
           {/* <Route exact path="/about"> */}
-            <About />
+            {/* <About /> */}
           {/* </Route> */}
       {/* "exact" is used to match the path exactly 
       ex-   users/   -component-1
