@@ -2,62 +2,12 @@ import React from 'react'
 
 export default function CustomMode(props) {
     return (
-  
-      props.mode==="dark" &&
-          <div className="customMode">
-            <div className="heading">
-            <h3>Custom Dark Mode</h3>
-            </div>
-            <div className="customColors">
-            <svg width="100" height="100">
-              <a href="">
-              <circle
-                cx="50"
-                cy="50"
-                r="10"
-                stroke="black"
-                strokeWidth="2"
-                fill="#1a4331"
-              />
-              </a>
-            </svg>
-            <svg width="100" height="100">
-              <a href="">
-              <circle
-                cx="50"
-                cy="50"
-                r="10"
-                stroke="black"
-                strokeWidth="2"
-                fill="#022765"
-              />
-              </a>
-            </svg>
-            <svg width="100" height="100">
-              <a href="">
-              <circle
-                cx="50"
-                cy="50"
-                r="10"
-                stroke="black"
-                strokeWidth="2"
-                fill="#230d36"
-              />
-              </a>
-            </svg>
-            <svg width="100" height="100">
-              <a href="">
-              <circle
-                cx="50"
-                cy="50"
-                r="10"
-                stroke="black"
-                strokeWidth="2"
-                fill="#000000"
-              />
-              </a>
-            </svg>
-            </div>   
-          </div>
+      <div className="d-flex flex-row-reverse">
+        <div className="bg-primary rounded mx-2 customMode" onClick={()=>{props.toggleCustomMode('primary')}} style={{height:'20px' ,width:'20px'}}></div>
+        <div className="bg-secondary rounded mx-2 customMode" onClick={()=>{props.toggleCustomMode('secondary')}} style={{height:'20px' ,width:'20px'}}></div>
+        <div className="bg-success rounded mx-2 customMode" onClick={()=>{props.toggleCustomMode('success')}} style={{height:'20px' ,width:'20px'}}></div>
+        <div className="bg-danger rounded mx-2 customMode" onClick={()=>{props.toggleCustomMode('danger')}} style={{height:'20px' ,width:'20px'}}></div>
+        <div className="bg-warning rounded mx-2 customMode" onClick={()=>{props.toggleCustomMode('warning')}} style={{height:'20px' ,width:'20px'}}></div>
+      </div>
     );
 }
